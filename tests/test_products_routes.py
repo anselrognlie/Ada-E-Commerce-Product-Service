@@ -16,7 +16,7 @@ def test_create_product_returns_product_with_generated_key(client):
 
     assert response.status_code == 200
     data = response.get_json()
-    assert data["name"] == "Widget"
+    assert data["name"] == "Not Widget"
     assert data["description"] == "A test widget"
     assert os.environ["KEY_NAME"] in data
 
